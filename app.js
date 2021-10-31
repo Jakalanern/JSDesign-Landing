@@ -13,8 +13,7 @@ jack.style.transition = "2s ease";
 bio.style.transform = "translateY(100vh)";
 bio.style.transition = "1s ease";
 arrow.style.opacity = "0";
-arrow.style.transition = "opacity 3s";
-arrow.style.transition = "transform .5s ease";
+arrow.style.transition = "opacity 3s, transform .5s ease";
 nav.style.opacity = "0";
 nav.style.transition = "opacity 3s";
 // End states for anim
