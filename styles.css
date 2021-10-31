@@ -1,0 +1,179 @@
+/* Table of Contents
+
+1. Globals
+
+2. Nav
+
+3. Landing
+
+*/
+
+/* GLOBALS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  overflow: hidden;
+}
+
+#fullscreen {
+  height: 100%;
+}
+/* NAV */
+nav {
+  padding: 0em 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* anim */
+}
+
+nav h1 {
+  /* FIGMA */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 42%;
+}
+
+nav .JS {
+  font-weight: 500;
+  margin-right: -0.2em;
+}
+
+nav .design {
+  font-weight: 100;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  list-style-type: none;
+  margin-right: 1em;
+  /* FIGMA */
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 115%;
+}
+
+nav li {
+  height: max-content;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+nav li:hover,
+nav li:focus {
+  transform: translateY(-4px);
+}
+
+nav li::after {
+  content: "";
+  position: absolute;
+  bottom: -2.5px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width: 20%;
+  margin: 0 auto;
+  background: #8cc8ff;
+  transition: width 0.5s ease, background 0.25s ease-in;
+  z-index: -5;
+}
+
+nav li:hover::after,
+nav li:focus::after {
+  width: 100%;
+  background: #8cc8ff;
+}
+/* LANDING */
+section {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+section h1 {
+  margin: 0.5em;
+}
+
+section .hi {
+  /* FIGMA */
+  font-weight: 200;
+  font-size: 54px;
+  text-align: center;
+  letter-spacing: 0.215em;
+}
+
+section .name {
+  /* FIGMA */
+  font-weight: 200;
+  font-size: 54px;
+  text-align: center;
+  letter-spacing: 0.215em;
+  margin-bottom: 0.5em;
+}
+
+section .portrait {
+  width: 300;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 35px #8cc8ff;
+}
+
+section p {
+  /* FIGMA */
+  max-width: 777px;
+  font-weight: 200;
+  font-size: 30px;
+  line-height: 231.19%;
+  /* or 69px */
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+p #developer {
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-color: #8cc8ff;
+  text-decoration-thickness: 2px;
+}
+
+p #designer {
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-color: #8cc8ff;
+  text-decoration-thickness: 2px;
+}
+
+section .arrow {
+  transform: translateY(70px);
+  width: 37px;
+  height: 49px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+section .arrow:hover,
+section .arrow:focus {
+  transform: translateY(74px);
+}
