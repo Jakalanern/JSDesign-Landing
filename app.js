@@ -1,32 +1,41 @@
 let hi = document.querySelector(".hi");
 let jack = document.querySelector(".name");
 let bio = document.querySelector(".bio");
-let arrow = document.querySelector(".arrow");
+let arrow = document.querySelector("#arrow1");
+let arrow2 = document.querySelector("#arrow2");
 let nav = document.querySelector("nav");
+let welcome = document.querySelector(".welcome");
+const tl = gsap.timeline({ default: { ease: "power1.out" } });
 
-// ANIMATIONS
-// Setting before states for anim
-hi.style.transform = "translateX(100vw)";
-hi.style.transition = "1s ease";
-jack.style.opacity = "0";
-jack.style.transition = "2s ease";
-bio.style.transform = "translateY(100vh)";
-bio.style.transition = "1s ease";
-arrow.style.opacity = "0";
-arrow.style.transition = "opacity 3s, transform .5s ease";
-nav.style.opacity = "0";
-nav.style.transition = "opacity 3s";
-// End states for anim
-setTimeout(function () {
-  hi.style.transform = "translateX(0px)";
-}, 250);
-setTimeout(function () {
-  jack.style.opacity = "1";
-}, 1250);
-setTimeout(function () {
-  bio.style.transform = "translateY(0px)";
-}, 2250);
-setTimeout(function () {
-  nav.style.opacity = "1";
-  arrow.style.opacity = "1";
-}, 3200);
+// EVENTS
+arrow.addEventListener("click", function () {
+  tl.to("#fullscreen1", { duration: 1, y: "-100%" });
+  tl.to("#fullscreen2", { duration: 1, y: "0%" }, "-=1");
+});
+
+arrow2.addEventListener("click", function () {
+  tl.to("#fullscreen2", { duration: 1, y: "-100%" });
+  tl.to("#fullscreen3", { duration: 1, y: "0%" }, "-=1");
+});
+//////
+
+// // ANIMATIONS
+//BEFORES
+gsap.to(nav, { duration: 0, opacity: 0 });
+gsap.to("#arrow1", { duration: 0, opacity: 0 });
+gsap.to(".name", { duration: 0, x: "100vw" });
+gsap.to(".portrait", { duration: 0, x: "100vw" });
+gsap.to(".portrait", { duration: 0, boxShadow: "none" });
+gsap.to("p", { duration: 0, x: "100vw" });
+gsap.to("#fullscreen2", { duration: 0, y: "100%" });
+gsap.to("#fullscreen3", { duration: 0, y: "100%" });
+//AFTERS
+tl.to(".welcome", { duration: 1, y: "0%" });
+tl.to(".intro-cover", { duration: 2, y: "-200%", delay: 0.5 });
+tl.to(".hide", { duration: 1, y: "0%" }, "-=1");
+tl.to(".portrait", { duration: 1, x: "0%" }, "-=1.5");
+tl.to(".name", { duration: 1, x: "0%" });
+tl.to("p", { duration: 1, x: "0%" });
+tl.to(nav, { duration: 1, opacity: 1 });
+tl.to("#arrow1", { duration: 1, opacity: 1 }, "-=1");
+gsap.to(".portrait", { duration: 2, boxShadow: "0px 0px 30px #8cc8ff" }, "-=2");
