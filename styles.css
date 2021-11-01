@@ -285,7 +285,7 @@ section .arrow:focus {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 750px) {
   .welcome {
     font-size: 3.25em !important;
   }
