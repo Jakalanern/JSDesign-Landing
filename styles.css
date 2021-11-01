@@ -282,7 +282,7 @@ section .arrow:focus {
 
 /* FULLSCREEN 2 */
 #fullscreen2 .img-box {
-  background: url(../imgs/site1.png);
+  background: url(imgs/site1.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,7 +290,7 @@ section .arrow:focus {
 
 /* FULLSCREEN 3 */
 #fullscreen3 .img-box {
-  background: url(../imgs/site2.png);
+  background: url(imgs/site2.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
