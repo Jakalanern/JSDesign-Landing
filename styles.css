@@ -90,6 +90,7 @@ nav ul {
 
 nav li {
   height: max-content;
+  width: max-content;
   display: flex;
   align-items: flex-end;
   position: relative;
